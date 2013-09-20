@@ -1,0 +1,44 @@
+{
+  "name": "dir-stats-sync",
+  "version": "0.1.0",
+  "description": "Node module to get stats of every item in a directory.",
+  "main": "./src/dir-stats-sync.js",
+  "directories": {
+    "lib": "src",
+    "doc": "docs",
+    "example": "examples"
+  },
+  "devDependencies": {
+    "atropa-jsformatter": ">=0.1.2",
+    "atropa-jslint": ">=0.1.2",
+    "jasmine-node": ">=1.11.0",
+    "jsdoc-toolkit": "git+https://github.com/matthewkastor/node-jsdoc-toolkit.git#fix-tests"
+  },
+  "scripts": {
+    "test": "jasmine-node specs/",
+    "buildDocs": "jsdoc-toolkit -v -d=./docs/jsdoc/ -r -s src/",
+    "lint" : "atropa-jslint ./src/dir-stats-sync.js",
+    "srcFormat" : "atropa-jsformatter ./src/dir-stats-sync.js ./src/dir-stats-sync.js"
+  },
+  "homepage" : "https://github.com/matthewkastor/dir-stats-sync/",
+  "bugs" : "https://github.com/matthewkastor/dir-stats-sync/issues",
+  "repository": {
+    "type" : "git",
+    "url" : "git://github.com/matthewkastor/dir-stats-sync.git"
+  },
+  "keywords": [
+    "dir-stats-sync",
+    "atropa"
+  ],
+  "author": {
+    "name"      : "Matthew Kastor",
+    "email"     : "matthewkastor@gmail.com",
+    "url"       : "https://plus.google.com/100898583798552211130"
+  },
+  "licenses": [
+    {
+        "type" : "gpl-3.0",
+        "url" : "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+    }
+  ]
+}
