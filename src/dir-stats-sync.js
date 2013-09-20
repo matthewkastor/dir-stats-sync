@@ -9,8 +9,7 @@
  * @fileOverview Node module to get stats of every item in a directory.
  * @author <a href="mailto:matthewkastor@gmail.com">Matthew Kastor</a>
  */
-
- /** @private */
+/** @private */
 function stater(l, dir, callback) {
     'use strict';
     var fs = require('fs');
@@ -22,35 +21,37 @@ function stater(l, dir, callback) {
         callback(file, stat, dir);
     });
 }
-
 /**
- * The module
- * @namespace The module
+ * The module.
+ * @namespace The module.
  * @name module
  */
 /**
- * The exports object
- * @namespace The exports object
+ * The exports object.
+ * @namespace The exports object.
+ * @name module.exports
  */
-module.exports = {
-    /**
-     * Performs fs.statSync on each item in a directory.
-     * @param {String} dir The directory to process.
-     * @param {Function} callback The callback receives three arguments: the name of
-     *  the item being stat-ed, the stat object, and the parent directory.
-     */
-    statDir: function statDir(dir, callback) {
-        'use strict';
-        stater(false, dir, callback);
-    },
-    /**
-     * Performs fs.lstatSync on each item in a directory.
-     * @param {String} dir The directory to process.
-     * @param {Function} callback The callback receives three arguments: the name of
-     *  the item being stat-ed, the stat object, and the parent directory.
-     */
-    lstatDir: function lstatDir(dir, callback) {
-        'use strict';
-        stater(true, dir, callback);
-    }
+/**
+ * Runs fs.statSync on each item in the directory.
+ * @param {String} dir Path to the directory to process.
+ * @param {Function} callback The callback will be given three arguments: the
+ *  name of the file being stat-ed, the stat object, and the parent directory.
+ * @see <a href="http://nodejs.org/api/fs.html#fs_fs_statsync_path">fs.statSync
+ * </a>
+ */
+module.exports.statDir = function statDir(dir, callback) {
+    'use strict';
+    stater(false, dir, callback);
+};
+/**
+ * Runs fs.lstatSync on each item in the directory.
+ * @param {String} dir Path to the directory to process.
+ * @param {Function} callback The callback will be given three arguments: the
+ *  name of the file being stat-ed, the stat object, and the parent directory.
+ * @see <a href="http://nodejs.org/api/fs.html#fs_fs_lstatsync_path">
+ * fs.lstatSync</a>
+ */
+module.exports.lstatDir = function lstatDir(dir, callback) {
+    'use strict';
+    stater(true, dir, callback);
 };
