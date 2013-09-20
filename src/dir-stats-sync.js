@@ -38,6 +38,17 @@ function stater(l, dir, callback) {
  *  name of the file being stat-ed, the stat object, and the parent directory.
  * @see <a href="http://nodejs.org/api/fs.html#fs_fs_statsync_path">fs.statSync
  * </a>
+ * @example
+ *  var path = require('path');
+ *  var dirStatsSync = require('dir-stats-sync');
+ *  
+ *  var dir = path.resolve(__dirname, 'testData');
+ *  
+ *  function statCallback (item, stat, dir) {
+ *      console.log(stat);
+ *  }
+ *  
+ *  dirStatsSync.statDir(dir, statCallback);
  */
 module.exports.statDir = function statDir(dir, callback) {
     'use strict';
@@ -50,6 +61,17 @@ module.exports.statDir = function statDir(dir, callback) {
  *  name of the file being stat-ed, the stat object, and the parent directory.
  * @see <a href="http://nodejs.org/api/fs.html#fs_fs_lstatsync_path">
  * fs.lstatSync</a>
+ * @example
+ *  var path = require('path');
+ *  var dirStatsSync = require('dir-stats-sync');
+ *  
+ *  var dir = path.resolve(__dirname, 'testData');
+ *  
+ *  function statCallback (item, stat, dir) {
+ *      console.log(stat);
+ *  }
+ *  
+ *  dirStatsSync.lstatDir(dir, statCallback);
  */
 module.exports.lstatDir = function lstatDir(dir, callback) {
     'use strict';
