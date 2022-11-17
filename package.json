@@ -1,6 +1,6 @@
 {
   "name": "dir-stats-sync",
-  "version": "0.1.0",
+  "version": "2022.11.16",
   "description": "Node module to get stats of every item in a directory.",
   "main": "./src/dir-stats-sync.js",
   "directories": {
@@ -17,28 +17,28 @@
   "scripts": {
     "test": "jasmine-node specs/",
     "buildDocs": "jsdoc-toolkit -v -d=./docs/jsdoc/ -r -s src/",
-    "lint" : "atropa-jslint ./src/dir-stats-sync.js",
-    "srcFormat" : "atropa-jsformatter ./src/dir-stats-sync.js ./src/dir-stats-sync.js"
+    "lint": "atropa-jslint ./src/dir-stats-sync.js",
+    "srcFormat": "atropa-jsformatter ./src/dir-stats-sync.js ./src/dir-stats-sync.js"
   },
-  "homepage" : "https://github.com/matthewkastor/dir-stats-sync/",
-  "bugs" : "https://github.com/matthewkastor/dir-stats-sync/issues",
+  "homepage": "https://github.com/matthewkastor/dir-stats-sync/",
+  "bugs": "https://github.com/matthewkastor/dir-stats-sync/issues",
   "repository": {
-    "type" : "git",
-    "url" : "git://github.com/matthewkastor/dir-stats-sync.git"
+    "type": "git",
+    "url": "git://github.com/matthewkastor/dir-stats-sync.git"
   },
   "keywords": [
     "dir-stats-sync",
     "atropa"
   ],
   "author": {
-    "name"      : "Matthew Kastor",
-    "email"     : "matthewkastor@gmail.com",
-    "url"       : "https://plus.google.com/100898583798552211130"
+    "name": "Matthew Kastor",
+    "email": "matthewkastor@gmail.com",
+    "url": "https://plus.google.com/100898583798552211130"
   },
   "licenses": [
     {
-        "type" : "gpl-3.0",
-        "url" : "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+      "type": "gpl-3.0",
+      "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
     }
   ]
 }
